@@ -1,0 +1,14 @@
+{
+  "name": "nifjs",
+  "version": "0.1.0",
+  "description": "A .s.nif -> native-JavaScript backend for nimony (near-native speed, readable output)",
+  "keywords": ["nimony", "nif", "transpiler", "javascript-backend"],
+  "main": "nifjs.js",
+  "bin": { "nifjs": "run.js" },
+  "scripts": {
+    "test": "node run.js examples/fizz.s.nif >/dev/null && node run.js examples/fib.s.nif >/dev/null && node run.js examples/coll.s.nif >/dev/null && echo ok"
+  },
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/aoughwl/nifjs.git" },
+  "homepage": "https://aoughwl.github.io/docs/nifjs"
+}
