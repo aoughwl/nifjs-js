@@ -1,0 +1,31 @@
+(.nif27)
+(.indexat 1055             )
+(stmts@,1,flt.nim
+ (import
+  (kv sysvq0asl "../../../../../home/savant/nimony/lib/std/system.nim")
+  (kv syn1lfpjv "../../../../../home/savant/nimony/lib/std/syncio.nim"))
+ (gvar@4,1 :x.0. . .
+  (f 64)3.5@4)
+ (gvar@4,2 :y.0. . .
+  (f 64)2.0@4)
+ (stmts@2,7a,../../../../../home/savant/nimony/lib/std/syncio.nim
+  (stmts@2,2
+   (cmd write.8.syn1lfpjv stdout.0.syn1lfpjv@6
+    (add@7,4,flt.nim
+     (f 64)x.0.~2 y.0.@2)))
+  (cmd@,3 write.7.syn1lfpjv stdout.0.syn1lfpjv@6 '\0A'@E))
+ (stmts@2,7a,../../../../../home/savant/nimony/lib/std/syncio.nim
+  (stmts@2,2
+   (cmd write.8.syn1lfpjv stdout.0.syn1lfpjv@6
+    (mul@7,5,flt.nim
+     (f 64)x.0.~2 y.0.@2)))
+  (cmd@,3 write.7.syn1lfpjv stdout.0.syn1lfpjv@6 '\0A'@E))
+ (stmts@2,7a,../../../../../home/savant/nimony/lib/std/syncio.nim
+  (stmts@2,2
+   (cmd write.8.syn1lfpjv stdout.0.syn1lfpjv@6
+    (div@7,6,flt.nim
+     (f 64)x.0.~2 y.0.@2)))
+  (cmd@,3 write.7.syn1lfpjv stdout.0.syn1lfpjv@6 '\0A'@E))
+ (comment@,3 echo.0.syn1lfpjv echo.0.syn1lfpjv@,1 echo.0.syn1lfpjv@,2))(.index@,1,flt.nim
+ (h x.0. 209)
+ (h y.0. 36))

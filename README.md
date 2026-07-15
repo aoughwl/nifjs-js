@@ -57,14 +57,16 @@ the playground produces them in-browser via `nifparser` → `nimsem`.
 
 ## Coverage
 
-Supported today: procs and recursion; `int`/`float` arithmetic and comparisons;
-`if`/`elif`/`else` and `case` (statement and expression, incl. ranges); `while`;
-`for` over integer ranges and over collections; `inc`/`dec`; `seq`/array literals
-(`@[…]`), `len`, indexing, `add`; `string` concatenation and `$`; `echo`; `bool`
-— enough for the whole FizzBuzz / primes / Collatz / seq-building class of
-program. Anything outside the subset makes the transpiler throw `unsupported …`
-(the playground then falls back to the faithful interpreter, so correctness is
-never worse than a normal run).
+Supported today: procs and recursion; `int` **and** `float` arithmetic (float
+`/` kept distinct from integer `div`) and comparisons; logical `and`/`or`/`not`
+**and** bitwise `and`/`or`/`xor`/`not`/`shl`/`shr`; `if`/`elif`/`else` and `case`
+(statement and expression, incl. ranges); `while` with `break`/`continue`; `for`
+over integer ranges and over collections; `inc`/`dec`; `seq`/array literals
+(`@[…]`), `len`, indexing, `add`; `string` concatenation and `$`; `echo`
+(float-aware); `bool` — enough for the whole FizzBuzz / primes / Collatz /
+seq-building class of program. Anything outside the subset makes the transpiler
+throw `unsupported …` (the playground then falls back to the faithful
+interpreter, so correctness is never worse than a normal run).
 
 Growing next: `Table`/`HashSet`, objects / tuples / variants, exceptions,
 closures, and monomorphized generics.
