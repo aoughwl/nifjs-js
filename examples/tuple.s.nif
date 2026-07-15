@@ -1,0 +1,30 @@
+(.nif27)
+(.indexat 709              )
+(stmts@,1,tup.nim
+ (import
+  (kv sysvq0asl "../../../../../home/savant/nimony/lib/std/system.nim")
+  (kv syn1lfpjv "../../../../../home/savant/nimony/lib/std/syncio.nim"))
+ (gvar@4,1 :t.0. . .
+  (tuple@6
+   (kv a~1
+    (i 64))
+   (kv@6 b~1
+    (i 64)))
+  (tupconstr@4
+   (tuple@2
+    (kv a~1
+     (i 64))
+    (kv@6 b~1
+     (i 64)))
+   (kv@2 a~1 1@2)
+   (kv@8 b~1 2@2)))
+ (stmts@2,7a,../../../../../home/savant/nimony/lib/std/syncio.nim
+  (stmts@2,2
+   (cmd write.2.syn1lfpjv stdout.0.syn1lfpjv@6
+    (add@9,3,tup.nim
+     (i 64)
+     (tupat~3 t.0.~1 0)
+     (tupat@3 t.0.~1 1))))
+  (cmd@,3 write.7.syn1lfpjv stdout.0.syn1lfpjv@6 '\0A'@E))
+ (comment@,2 echo.0.syn1lfpjv))(.index@,1,tup.nim
+ (h t.0. 209))
