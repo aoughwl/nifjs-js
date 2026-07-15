@@ -1,0 +1,49 @@
+(.nif27)
+(.indexat 1273             )
+(stmts@,1,enum.nim
+ (import
+  (kv sysvq0asl "../../../../../home/savant/nimony/lib/std/system.nim")
+  (kv syn1lfpjv "../../../../../home/savant/nimony/lib/std/syncio.nim"))
+ (type@B,1 :Color.0.~6 . . .
+  (enum@2
+   (u 8)
+   (efld@5 :red.0. . . Color.0.
+    (tup 0 "red"))
+   (efld@A :green.0. . . Color.0.
+    (tup 1 "green"))
+   (efld@H :blue.0. . . Color.0.
+    (tup 2 "blue"))))
+ (proc@5,1 :dollar`.Color.0. x . .
+  (params
+   (param :e.0 . . Color.0. .))string.0.sysvq0asl . .
+  (stmts
+   (result@8 :result.0 . . string.0.sysvq0asl .)
+   (case@8 e.0
+    (of@5
+     (ranges red.0.)
+     (stmts
+      (ret "red")))
+    (of@A
+     (ranges green.0.)
+     (stmts
+      (ret "green")))
+    (of@H
+     (ranges blue.0.)
+     (stmts
+      (ret "blue"))))
+   (ret result.0)))
+ (gvar@4,2 :c.0. . . Color.0.@J,~1 green.0.@4)
+ (stmts@2,7a,../../../../../home/savant/nimony/lib/std/syncio.nim
+  (stmts@2,2
+   (cmd write.2.syn1lfpjv stdout.0.syn1lfpjv@6
+    (expr@2,3S,../../../../../home/savant/nimony/lib/std/system.nim
+     (conv@3,2
+      (i@U,E,../../../../../home/savant/nimony/lib/std/system/defaults.nim 64)c.0.@9,4,enum.nim))))
+  (cmd@,3 write.7.syn1lfpjv stdout.0.syn1lfpjv@6 '\0A'@E))
+ (comment@8,3 ord.0.sysvq0asl echo.0.syn1lfpjv~8))(.index@,1,enum.nim
+ (h Color.0. 210)
+ (h@D,1 red.0. 48)
+ (h@D,1 green.0. 51)
+ (h@D,1 blue.0. 55)
+ (x dollar`.Color.0. 55)
+ (h c.0. 388))

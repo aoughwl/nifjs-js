@@ -68,10 +68,19 @@ collections; `inc`/`dec`; `seq`/array literals (`@[…]`), `len`, indexing
 (float-aware); `bool`. Anything outside the subset makes the transpiler throw
 `unsupported …` (the playground then falls back to the faithful interpreter).
 
-**Robustness:** nifjs never emits a reference to a routine it didn't build — a
-call to a proc/func it can't transpile (a complex stdlib routine, an unsupported
-node) triggers a clean fall back to the interpreter rather than a runtime crash,
-so correctness is never worse than a normal run.
+Plus **enums** (values → ordinals), **const**, fixed-size **arrays**, and a
+**shim registry** — the native-JS equivalent of stdlib / `importc` routines
+(`math.*` → `Math.*`, `strutils.*` → `String`/`Array` methods, `parseInt`/…),
+keyed by proc name, so those run at native speed with no body to transpile and
+no marshaling. This is nifjs's FFI story: a user proc of the same name always
+wins; otherwise a matching shim is emitted directly.
+
+**Robustness & safety:** nifjs never emits a reference to a routine it didn't
+build — a call to a proc/func it can't transpile (a complex stdlib routine, an
+unsupported node) triggers a clean fall back to the interpreter rather than a
+runtime crash. A `var`/`out` parameter (whose mutation can't round-trip through
+JS's pass-by-value) drops the routine so its callers fall back too — never
+silently wrong. Correctness is never worse than a normal run.
 
 Growing next: `Table`/`HashSet`, objects / tuples / variants, exceptions,
 closures, and monomorphized generics.
