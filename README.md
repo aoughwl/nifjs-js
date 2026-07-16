@@ -1,8 +1,8 @@
-# nifjs
+# nifjs-js
 
 A `.s.nif` → **native-JavaScript** backend for [nimony](https://github.com/nim-lang/nimony).
 
-`nifjs` reads a typed nimony NIF (`.s.nif`) — the artifact the compiler emits
+`nifjs-js` reads a typed nimony NIF (`.s.nif`) — the artifact the compiler emits
 after `nimsem`, with symbols resolved and overloads picked — and transpiles it to
 **real JavaScript**, mapping nimony values onto native JS values (`int`/`float` →
 `number`, `string` → `string`, `seq` → `Array`, `bool` → `boolean`) instead of
@@ -16,7 +16,7 @@ It is the **Native JS** engine in the
 
 Nimony's faithful web backend ([`nimony-web`](https://github.com/aoughwl/nimony-web))
 lowers to a C-like IR and simulates one linear `ArrayBuffer` — exact (int64,
-pointers, ARC, C FFI), but slow (`DataView` per access) and mangled. `nifjs` works
+pointers, ARC, C FFI), but slow (`DataView` per access) and mangled. `nifjs-js` works
 from the **higher-level typed IR** and emits native values, so it is fast *and*
 legible for the same reason. It's the fast path; the interpreter
 ([`nifi`](https://github.com/aoughwl/nifi)) is the faithful fallback.
@@ -47,7 +47,7 @@ node run.js --emit examples/fib.s.nif    # print the emitted JavaScript
 Or as a library (browser or Node):
 
 ```js
-const njs = require("./nifjs.js");   // browser: window.NifiAssemble-style global `NifiJs`
+const njs = require("./nifjs-js.js");   // browser: window.NifiAssemble-style global `NifiJs`
 njs.run(snifText);        // -> program output (string)
 njs.compile(snifText);    // -> emitted JavaScript source (string)
 ```
@@ -57,7 +57,7 @@ the playground produces them in-browser via `nifparser` → `nimsem`.
 
 ## Coverage
 
-Coverage is broad — nifjs runs essentially all of the language nimony can
+Coverage is broad — nifjs-js runs essentially all of the language nimony can
 currently express: procs and recursion (mutual **and nested / closures**);
 **generic** instances (monomorphised); `int` **and** `float` arithmetic (float
 `/` kept distinct from integer `div`) and comparisons; logical `and`/`or`/`not`
@@ -76,10 +76,10 @@ Plus **enums** (values → ordinals), **const**, fixed-size **arrays**, and a
 **shim registry** — the native-JS equivalent of stdlib / `importc` routines
 (`math.*` → `Math.*`, `strutils.*` → `String`/`Array` methods, `parseInt`/…),
 keyed by proc name, so those run at native speed with no body to transpile and
-no marshaling. This is nifjs's FFI story: a user proc of the same name always
+no marshaling. This is nifjs-js's FFI story: a user proc of the same name always
 wins; otherwise a matching shim is emitted directly.
 
-**Robustness & safety:** nifjs never emits a reference to a routine it didn't
+**Robustness & safety:** nifjs-js never emits a reference to a routine it didn't
 build — a call to a proc/func it can't transpile (a complex stdlib routine, an
 unsupported node) triggers a clean fall back to the interpreter rather than a
 runtime crash. A `var`/`out` parameter (whose mutation can't round-trip through
@@ -93,7 +93,7 @@ The fidelity trade-off: native JS numbers are exact only to 2⁵³ (not full int
 wraparound), and there's no pointer identity / ARC timing / C FFI — which is why
 the faithful backend stays the default for exact semantics.
 
-**📖 Full docs → [aoughwl.github.io/docs/nifjs](https://aoughwl.github.io/docs/nifjs)**
+**📖 Full docs → [aoughwl.github.io/docs/nifjs-js](https://aoughwl.github.io/docs/nifjs-js)**
 
 ## License
 
