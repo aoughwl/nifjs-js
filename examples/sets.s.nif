@@ -1,0 +1,35 @@
+(.nif27)
+(.indexat 1183             )
+(stmts@,1,setx.nim
+ (import
+  (kv sysvq0asl "../../../../../home/savant/nimony/lib/std/system.nim")
+  (kv syn1lfpjv "../../../../../home/savant/nimony/lib/std/syncio.nim"))
+ (proc@,1 :isSpace.0.@5 . . .
+  (params@C
+   (param@1 :c.0 . .
+    (c@3 8).))
+  (bool@B). .
+  (stmts@2,1
+   (result@2 :result.0 . .
+    (bool@7,~1).)
+   (asgn@2 result.0
+    (expr@2,2k,../../../../../home/savant/nimony/lib/std/system.nim
+     (inset@8
+      (set
+       (c 8))
+      (setconstr@7,3,setx.nim
+       (set
+        (c 8))' '@1 '\09'@6 '\0A'@C)c.0@2,3,setx.nim)))
+   (ret~2,~1 result.0)))
+ (stmts@2,7a,../../../../../home/savant/nimony/lib/std/syncio.nim
+  (stmts@2,2
+   (cmd write.1.syn1lfpjv stdout.0.syn1lfpjv@6
+    (call@C,4,setx.nim isSpace.0.~7 ' '@1)))
+  (cmd@,3 write.7.syn1lfpjv stdout.0.syn1lfpjv@6 '\0A'@E))
+ (stmts@2,7a,../../../../../home/savant/nimony/lib/std/syncio.nim
+  (stmts@2,2
+   (cmd write.1.syn1lfpjv stdout.0.syn1lfpjv@6
+    (call@C,5,setx.nim isSpace.0.~7 'x'@1)))
+  (cmd@,3 write.7.syn1lfpjv stdout.0.syn1lfpjv@6 '\0A'@E))
+ (comment@G,1 char.0.sysvq0asl bool.0.sysvq0asl~5 in.0.sysvq0asl~C,1 echo.0.syn1lfpjv~G,2 echo.0.syn1lfpjv~G,3))(.index@,1,setx.nim
+ (h isSpace.0. 210))
