@@ -1,0 +1,62 @@
+(.nif27)
+(.indexat 1906             )
+(stmts@,1,vp.nim
+ (import
+  (kv sysvq0asl "../../../../../home/savant/nimony/lib/std/system.nim")
+  (kv syn1lfpjv "../../../../../home/savant/nimony/lib/std/syncio.nim"))
+ (proc@,1 :bump.0.@5 . . .
+  (params@9
+   (param@1 :x.0 . .
+    (mut@3
+     (i@4 64)).)). . .
+  (stmts@O
+   (asgn@2
+    (hderef~2 x.0)
+    (add@4
+     (i 64)
+     (hderef~2 x.0)10@2))))
+ (proc@,2 :double.0.@5 . . .
+  (params@B
+   (param@1 :x.1 . .
+    (mut@3
+     (i@4 64)).)). . .
+  (stmts@Q
+   (call@3 inc.0.Iwdk9lf.~3 x.1@1
+    (hderef@4 x.1))))
+ (gvar@4,3 :a.0. . .
+  (i 64)5@4)
+ (call@4,4 bump.0.~4
+  (haddr@1 a.0.))
+ (stmts@2,7a,../../../../../home/savant/nimony/lib/std/syncio.nim
+  (stmts@2,2
+   (cmd write.2.syn1lfpjv stdout.0.syn1lfpjv@6 a.0.@5,6,vp.nim))
+  (cmd@,3 write.7.syn1lfpjv stdout.0.syn1lfpjv@6 '\0A'@E))
+ (call@6,6 double.0.~6
+  (haddr@1 a.0.))
+ (stmts@2,7a,../../../../../home/savant/nimony/lib/std/syncio.nim
+  (stmts@2,2
+   (cmd write.2.syn1lfpjv stdout.0.syn1lfpjv@6 a.0.@5,8,vp.nim))
+  (cmd@,3 write.7.syn1lfpjv stdout.0.syn1lfpjv@6 '\0A'@E))
+ (comment@H,1 int.0.sysvq0asl int.0.sysvq0asl@2,1 echo.0.syn1lfpjv~H,4 echo.0.syn1lfpjv~H,6)
+ (func@T,2 :inc.0.Iwdk9lf. . .@,6,../../../../../home/savant/nimony/lib/std/system/arithmetics.nim
+  (at inc.0.sysvq0asl
+   (i~A 64)
+   (i~A 64))
+  (params@O,6,../../../../../home/savant/nimony/lib/std/system/arithmetics.nim
+   (param@1 :x.3 . .
+    (mut@3
+     (i@J,3,vp.nim 64)).)
+   (param@B :y.1 . .
+    (i@J,3,vp.nim 64).)).@,6,../../../../../home/savant/nimony/lib/std/system/arithmetics.nim
+  (pragmas@f,6,../../../../../home/savant/nimony/lib/std/system/arithmetics.nim
+   (inline@2)).@,6,../../../../../home/savant/nimony/lib/std/system/arithmetics.nim
+  (stmts@2,7,../../../../../home/savant/nimony/lib/std/system/arithmetics.nim
+   (asgn@2,1
+    (hderef~2 x.3)
+    (add@6
+     (i@J,3,vp.nim 64)
+     (hderef@1 x.3)y.1@4)))))(.index@,1,vp.nim
+ (h bump.0. 208)
+ (h double.0. 186)
+ (h a.0. 163)
+ (h inc.0.Iwdk9lf. 613))
