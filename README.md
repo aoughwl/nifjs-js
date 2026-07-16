@@ -1,6 +1,13 @@
 # nifjs-js
 
-A `.s.nif` → **native-JavaScript** backend for [nimony](https://github.com/nim-lang/nimony).
+The hand-written **JavaScript** implementation of nifjs — a `.s.nif` →
+**native-JavaScript** backend for [nimony](https://github.com/nim-lang/nimony).
+
+> **This is the bootstrap seed.** The canonical, nimony-native implementation
+> lives at **[`aoughwl/nifjs`](https://github.com/aoughwl/nifjs)**. This repo is
+> the original hand-written JS version: it works today, powers the playground's
+> *Native JS* engine, serves as the differential oracle, and is what compiles the
+> nimony `nifjs` the first time. Once that self-hosts, this becomes a reference.
 
 `nifjs-js` reads a typed nimony NIF (`.s.nif`) — the artifact the compiler emits
 after `nimsem`, with symbols resolved and overloads picked — and transpiles it to
