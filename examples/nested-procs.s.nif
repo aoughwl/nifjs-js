@@ -1,0 +1,40 @@
+(.nif27)
+(.indexat 1064             )
+(stmts@,1,nested.nim
+ (import
+  (kv sysvq0asl "../../../../../home/savant/nimony/lib/std/system.nim")
+  (kv syn1lfpjv "../../../../../home/savant/nimony/lib/std/syncio.nim"))
+ (proc@,1 :outer.0.@5 . . .
+  (params@A
+   (param@1 :n.0 . .
+    (i@3 64).))
+  (i@A 64). .
+  (stmts@2,1
+   (result :result.0 . .
+    (i@C,~1 64).)
+   (proc :inner.0.@5 . . .
+    (params@A
+     (param@1 :x.0 . .
+      (i@3 64).))
+    (i@A 64). .
+    (stmts@Q
+     (result@2 :result.1 . .
+      (i~G,~1 64).)
+     (asgn@2 result.1
+      (add
+       (i 64)x.0~2 1@2))
+     (ret~Q result.1)))
+   (ret@,1
+    (add@G
+     (i 64)
+     (call~4 inner.0.~5 n.0@1)
+     (call@7 inner.0.~5 n.0@1)))
+   (ret~2,~1 result.0)))
+ (stmts@2,7a,../../../../../home/savant/nimony/lib/std/syncio.nim
+  (stmts@2,2
+   (cmd write.2.syn1lfpjv stdout.0.syn1lfpjv@6
+    (call@A,5,nested.nim outer.0.~5 10@1)))
+  (cmd@,3 write.7.syn1lfpjv stdout.0.syn1lfpjv@6 '\0A'@E))
+ (comment@E,1 int.0.sysvq0asl int.0.sysvq0asl~4 int.0.sysvq0asl@2,1 int.0.sysvq0asl~2,1 echo.0.syn1lfpjv~E,3))(.index@,1,nested.nim
+ (h outer.0. 212)
+ (h@2,2 inner.0. 147))

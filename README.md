@@ -57,16 +57,20 @@ the playground produces them in-browser via `nifparser` → `nimsem`.
 
 ## Coverage
 
-Supported today: procs and recursion (incl. mutual); `int` **and** `float`
-arithmetic (float `/` kept distinct from integer `div`) and comparisons; logical
-`and`/`or`/`not` **and** bitwise `and`/`or`/`xor`/`not`/`shl`/`shr`;
-`if`/`elif`/`else` **and if-expressions**; `case` (statement and expression, incl.
-ranges); `while` with `break`/`continue`; `for` over integer ranges and over
-collections; `inc`/`dec`; `seq`/array literals (`@[…]`), `len`, indexing
-(get/set), `add`/`pop`; **objects** (construct / field read+write) and **tuples**;
-`string` concat, `$`, `len`, indexing, `ord`/`chr`; `abs`/`min`/`max`; `echo`
-(float-aware); `bool`. Anything outside the subset makes the transpiler throw
-`unsupported …` (the playground then falls back to the faithful interpreter).
+Coverage is broad — nifjs runs essentially all of the language nimony can
+currently express: procs and recursion (mutual **and nested / closures**);
+**generic** instances (monomorphised); `int` **and** `float` arithmetic (float
+`/` kept distinct from integer `div`) and comparisons; logical `and`/`or`/`not`
+**and** bitwise `and`/`or`/`xor`/`not`/`shl`/`shr`; `if`/`elif`/`else` **and
+if-expressions**; `case` (statement and expression, ranges, string selectors);
+`while` with `break`/`continue`; `for` over ranges, collections, `countdown`, and
+`for i, x in` pairs; `inc`/`dec`; `const`, **enums** (→ ordinals), `when`,
+`discard`; `seq`/array literals (`@[…]`), `len`, indexing (get/set), `add`/`pop`;
+**objects** (construct / field read+write, incl. through a seq), object
+**variants**, and **tuples** (construct / access / unpack); `string` concat,
+`add`, `$`, `len`, indexing, `ord`/`chr`; `echo` (float-aware); `bool`. Anything
+outside makes the transpiler throw `unsupported …` and fall back to the
+interpreter.
 
 Plus **enums** (values → ordinals), **const**, fixed-size **arrays**, and a
 **shim registry** — the native-JS equivalent of stdlib / `importc` routines

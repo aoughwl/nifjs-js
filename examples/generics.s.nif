@@ -1,0 +1,50 @@
+(.nif27)
+(.indexat 1455             )
+(stmts@,1,generic.nim
+ (import
+  (kv sysvq0asl "../../../../../home/savant/nimony/lib/std/system.nim")
+  (kv syn1lfpjv "../../../../../home/savant/nimony/lib/std/syncio.nim"))
+ (proc@,1 :twice.0.@5 . .
+  (typevars@A
+   (typevar@1 :T.0. . . . .))
+  (params@D
+   (param@1 :x.0 . . T.0.@3 .))T.0.@8 . .
+  (stmts@P
+   (result :result.0 . . T.0.~8 .)
+   (asgn result.0 x.0)
+   (ret~P result.0)))
+ (stmts@2,7a,../../../../../home/savant/nimony/lib/std/syncio.nim
+  (stmts@2,2
+   (cmd write.2.syn1lfpjv stdout.0.syn1lfpjv@6
+    (call@A,3,generic.nim twice.0.I6nbo3j1.~5 21@1)))
+  (cmd@,3 write.7.syn1lfpjv stdout.0.syn1lfpjv@6 '\0A'@E))
+ (stmts@2,7a,../../../../../home/savant/nimony/lib/std/syncio.nim
+  (stmts@2,2
+   (cmd write.0.syn1lfpjv stdout.0.syn1lfpjv@6
+    (call@A,4,generic.nim twice.0.Ib7w4fm1.~5 "hi"@1)))
+  (cmd@,3 write.7.syn1lfpjv stdout.0.syn1lfpjv@6 '\0A'@E))
+ (comment@,2 echo.0.syn1lfpjv echo.0.syn1lfpjv@,1)
+ (proc@A,2 :twice.0.I6nbo3j1. . .~A,~1
+  (at twice.0.
+   (i 64))
+  (params@3,~1
+   (param@1 :x.3 . .
+    (i 64).))
+  (i 64). .~A,~1
+  (stmts@F,~1
+   (result :result.1 . .
+    (i 64).)
+   (asgn result.1 x.3)
+   (ret~P result.1)))
+ (proc@A,3 :twice.0.Ib7w4fm1. . .~A,~2
+  (at twice.0. string.0.sysvq0asl)
+  (params@3,~2
+   (param@1 :x.4 . . string.0.sysvq0asl .))string.0.sysvq0asl . .~A,~2
+  (stmts@F,~2
+   (result :result.2 . . string.0.sysvq0asl .)
+   (asgn result.2 x.4)
+   (ret~P result.2))))(.index@,1,generic.nim
+ (h twice.0. 213)
+ (h@A,1 T.0. 40)
+ (h twice.0.I6nbo3j1. 706)
+ (h twice.0.Ib7w4fm1. 229))

@@ -1,0 +1,169 @@
+(.nif27)
+(.indexat 3607             )
+(stmts@,1,variant.nim
+ (import
+  (kv sysvq0asl "../../../../../home/savant/nimony/lib/std/system.nim")
+  (kv syn1lfpjv "../../../../../home/savant/nimony/lib/std/syncio.nim"))
+ (type@7,2 :Kind.0.~5 . . .
+  (enum@2
+   (u 8)
+   (efld@5 :ki.0. . . Kind.0.
+    (tup 0 "ki"))
+   (efld@9 :ks.0. . . Kind.0.
+    (tup 1 "ks"))))
+ (proc@2,2 :dollar`.Kind.0. x . .
+  (params
+   (param :e.0 . . Kind.0. .))string.0.sysvq0asl . .
+  (stmts
+   (result@7 :result.0 . . string.0.sysvq0asl .)
+   (case@7 e.0
+    (of@5
+     (ranges ki.0.)
+     (stmts
+      (ret "ki")))
+    (of@9
+     (ranges ks.0.)
+     (stmts
+      (ret "ks"))))
+   (ret result.0)))
+ (type@6,3 :Val.0.~4 . .
+  (pragmas
+   (destroy =destroy_SX56al0var6341uj1.0.)
+   (wasmoved =wasmoved_SX56al0var6341uj1.0.)
+   (dup =dup_SX56al0var6341uj1.0.)
+   (copy =copy_SX56al0var6341uj1.0.))
+  (object@2 .
+   (case~4,1
+    (fld@5 :kind.0 . . Kind.0.@6 .)
+    (of@,1
+     (ranges ki.0.@3)
+     (stmts@7
+      (fld :i.0 . .
+       (i@3 64).)))
+    (of@,2
+     (ranges ks.0.@3)
+     (stmts@7
+      (fld :s.0 . . string.0.sysvq0asl@3 .))))))
+ (gvar@4,7 :v.0. . . Val.0.@4
+  (oconstr@7 Val.0.~3
+   (kv@5 kind.0~4 ki.0.@2)
+   (kv@C i.0~1 42@2)))
+ (stmts@2,7a,../../../../../home/savant/nimony/lib/std/syncio.nim
+  (stmts@2,2
+   (cmd write.2.syn1lfpjv stdout.0.syn1lfpjv@6
+    (dot@6,9,variant.nim v.0.~1 i.0 0 "x")))
+  (cmd@,3 write.7.syn1lfpjv stdout.0.syn1lfpjv@6 '\0A'@E))
+ (comment@E,5 int.0.sysvq0asl echo.0.syn1lfpjv~E,3)
+ (proc@6,3 :=destroy_SX56al0var6341uj1.0. . . .
+  (params
+   (param :dest.0 . . Val.0. .)).
+  (pragmas
+   (nodestroy)).
+  (stmts
+   (case~2,1
+    (dot@2,~1 dest.0 kind.0 0)
+    (of@,1
+     (ranges ki.0.@3)
+     (stmts@7))
+    (of@,2
+     (ranges ks.0.@3)
+     (stmts@7
+      (call~5,~3 =destroy.2.sysvq0asl
+       (dot dest.0 s.0 0)))))))
+ (proc@6,3 :=wasmoved_SX56al0var6341uj1.0. . . .
+  (params
+   (param :dest.0 . .
+    (mut Val.0.).)).
+  (pragmas
+   (nodestroy)).
+  (stmts
+   (case~2,1
+    (dot@2,~1
+     (hderef dest.0)kind.0 0)
+    (of@,1
+     (ranges ki.0.@3)
+     (stmts@7))
+    (of@,2
+     (ranges ks.0.@3)
+     (stmts@7
+      (call~5,~3 =wasMoved.2.sysvq0asl
+       (haddr
+        (dot
+         (hderef dest.0)s.0 0))))))))
+ (proc@6,3 :=dup_SX56al0var6341uj1.0. . . .
+  (params
+   (param :src.0 . . Val.0. .))Val.0.
+  (pragmas
+   (nodestroy)).
+  (stmts
+   (result :dest.0 .
+    (pragmas
+     (noinit))Val.0. .)
+   (asgn
+    (dot dest.0 kind.0 0)
+    (dot src.0 kind.0 0))
+   (case~2,1
+    (dot@2,~1 dest.0 kind.0 0)
+    (of@,1
+     (ranges ki.0.@3)
+     (stmts@7
+      (asgn~5,~2
+       (dot dest.0 i.0 0)
+       (dot src.0 i.0 0))))
+    (of@,2
+     (ranges ks.0.@3)
+     (stmts@7
+      (asgn~5,~3
+       (dot dest.0 s.0 0)
+       (call =dup.2.sysvq0asl
+        (dot src.0 s.0 0))))))
+   (ret dest.0)))
+ (proc@6,3 :=copy_SX56al0var6341uj1.0. . . .
+  (params
+   (param :dest.0 . .
+    (mut Val.0.).)
+   (param :src.0 . . Val.0. .)).
+  (pragmas
+   (nodestroy)).
+  (stmts
+   (case~2,1
+    (dot@2,~1 dest.0 kind.0 0)
+    (of@,1
+     (ranges ki.0.@3)
+     (stmts@7))
+    (of@,2
+     (ranges ks.0.@3)
+     (stmts@7
+      (call~5,~3 =destroy.2.sysvq0asl
+       (dot dest.0 s.0 0)))))
+   (asgn
+    (dot
+     (hderef dest.0)kind.0 0)
+    (dot src.0 kind.0 0))
+   (case~2,1
+    (dot@2,~1
+     (hderef dest.0)kind.0 0)
+    (of@,1
+     (ranges ki.0.@3)
+     (stmts@7
+      (asgn~5,~2
+       (dot
+        (hderef dest.0)i.0 0)
+       (dot src.0 i.0 0))))
+    (of@,2
+     (ranges ks.0.@3)
+     (stmts@7
+      (call~5,~3 =copy.2.sysvq0asl
+       (dot
+        (hderef dest.0)s.0 0)
+       (dot src.0 s.0 0))))))))(.index@,1,variant.nim
+ (h Kind.0. 213)
+ (h@9,2 ki.0. 47)
+ (h@9,2 ks.0. 48)
+ (x dollar`.Kind.0. 50)
+ (h Val.0. 313)
+ (h v.0. 443)
+ (h =destroy_SX56al0var6341uj1.0. 384)
+ (h =wasmoved_SX56al0var6341uj1.0. 339)
+ (h =dup_SX56al0var6341uj1.0. 396)
+ (h =copy_SX56al0var6341uj1.0. 579))
